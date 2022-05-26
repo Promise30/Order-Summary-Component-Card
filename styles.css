@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a 
+    { color: hsl(228, 45%, 44%);
+}
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+*{
+    border: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-color: var(--pale-blue);
+    background-repeat: no-repeat;
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.container{
+    background-color: white;
+    width: 370px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-container #illustration-img{
+    width: 100%;
+    object-fit: contain;
+}
+.product-info{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 5px auto;
+    padding: 5px;
+}
+.product-info h1{
+    color: var(--dark-blue);
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.product-info p{
+    margin: -5px 20px;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0px 40px;
+    color: var(--desaturated-blue);
+}
+
+.plan-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: var(--very-pale-blue);
+    position: relative;
+}
+.plan-info img{
+    height: 45px;
+    margin-left: 15px;
+}
+.plan-info .price{
+    position: relative;
+    margin-left: 25px;
+    font-size: 1.2rem;
+} 
+.plan-info .price h2{
+    font-weight: 900;   
+    margin-top: 10px;
+    font-size: 1.4rem; 
+    color: var(--dark-blue); 
+}
+.plan-info .price p{
+    font-size: 1.4rem;
+    margin-top: -10px;
+    font-weight: 500;
+    color: var(--desaturated-blue);
+}
+.plan-info .change-button{
+    position: absolute;
+    right: 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: underline;
+    background: none;
+    color: var(--bright-blue)
+}
+.container a:hover{
+    cursor: pointer;
+    color: var(--desaturated-blue);
+    text-decoration: none;
+    transition: ease-in-out 0.5s;
+}
+
+.payment-button #proceed{
+    text-align: center;
+    padding: 12px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: var(--bright-blue);
+    box-shadow:  0px 15px 15px  rgba(114, 128, 167, 0.4);
+    
+}
+.payment-button #proceed:hover{
+    cursor: pointer;
+    background-color: var(--desaturated-blue);
+    transition: ease-in-out, 0.5s;
+}
+.payment-button #cancel{
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    margin-top: 20px;
+    text-align: center;
+}
+.payment-button #cancel:hover{
+    cursor: pointer;
+    font-weight: 900;
+    transition: ease-in-out 0.5s;
+}
+@media (max-width: 430px) {
+    body{
+        background-image: url(./images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+    }
+    .container {
+        width: 350px;
+    }
+}
